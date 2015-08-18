@@ -11,7 +11,8 @@ config :async_publishing, AsyncPublishing.Endpoint,
   debug_errors: true,
   code_reloader: true,
   cache_static_lookup: false,
-  watchers: []
+  watchers: [],
+  url: [host: "policy-publisher.dev.gov.uk"]
 
 # Watch static and templates for browser reloading.
 config :async_publishing, AsyncPublishing.Endpoint,
