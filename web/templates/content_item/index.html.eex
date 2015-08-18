@@ -1,0 +1,18 @@
+<h2>Content items</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for content_item_id <- @content_item_ids do %>
+    <tr>
+      <td class="text-right">
+        <%= link content_item_id, to: content_item_path(@conn, :show, content_item_id), class: "btn btn-default btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>

@@ -1,0 +1,16 @@
+<h2>Content item <%= @id %></h2>
+
+<ul>
+  <%= for {action, details} <- @workflow_actions do %>
+    <li>
+      <%= details["human_action"] %>
+      <%= details["state"] %>
+
+      <%= if details["state"] == "incomplete" do %>
+        <%= button "Trigger", to: content_item_path(@conn, :update, @id, %{action: action}), method: "put" %>
+      <%= end %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link "Back", to: content_item_path(@conn, :index) %>

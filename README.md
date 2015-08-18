@@ -15,7 +15,7 @@ as seen in the `async-publishing-prototype` branch of Policy Publisher.
 System dependencies can be found at http://www.phoenixframework.org/docs/installation
 
 There are no application dependencies, however this application is a dependency
-of the `async-publishing-prototype` branch of Policy Publisher.
+of the `async-publishing-prototype` branch of Policy Publisher and the Publishing API.
 
 ## Running the application
 
