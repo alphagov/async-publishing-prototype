@@ -28,8 +28,11 @@ defmodule AsyncPublishing.ContentItemController do
 
     updated_actions = %{}
     |> Map.put(action, details)
-
     AsyncPublishing.Endpoint.broadcast!("content_items:#{id}", "update", updated_actions)
+
+    updated_actions_by_id = %{}
+    |> Map.put(id, updated_actions)
+    AsyncPublishing.Endpoint.broadcast!("content_items:index", "update", updated_actions_by_id)
 
     conn
     |> put_flash(:info, "#{action} triggered successfully.")
