@@ -7,10 +7,10 @@
     </tr>
   </thead>
   <tbody>
-<%= for content_item_id <- @content_item_ids do %>
+<%= for {content_item_id, title} <- @ids_and_titles do %>
     <tr>
       <td class="text-right">
-        <%= link content_item_id, to: content_item_path(@conn, :show, content_item_id), class: "btn btn-default btn-xs" %>
+        <%= link title, to: content_item_path(@conn, :show, content_item_id) %>
       </td>
     </tr>
 <% end %>

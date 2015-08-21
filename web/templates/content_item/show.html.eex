@@ -1,4 +1,4 @@
-<h2>Content item <%= @id %></h2>
+<h2><%= @title %></h2>
 
 <ul>
   <%= for {action, details} <- @workflow_actions do %>

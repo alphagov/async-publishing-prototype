@@ -11,6 +11,7 @@ defmodule AsyncPublishing do
       supervisor(AsyncPublishing.Endpoint, []),
       # Here you could define other workers and supervisors as children
       worker(AsyncPublishing.WorkflowActionRepository, []),
+      worker(AsyncPublishing.TitleMap, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
